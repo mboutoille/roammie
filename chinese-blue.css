@@ -11,6 +11,7 @@ h4,
 h5,
 h6 {
     font-family: 'Noto Sans SC';
+    font-size: 115%; 
 }
 
 div,
@@ -34,7 +35,7 @@ textarea {
     background-color: #f7f8f8;
     padding: 0.8em;
     color: #d1dbe2;
-    font-size: 80%;
+    font-size: 16px;
 }
 
 .rm-reference-main.rm-query-content {
@@ -42,11 +43,11 @@ textarea {
 }
 
 .rm-reference-main .rm-reference-item .rm-block-text {
-    font-size: 90%;
+    font-size: 16px;
 }
 
 .rm-ref-page-view-title span {
-    font-size: 115%
+    font-size: 16px;
 }
 
 .rm-reference-main .rm-reference-item .controls {
@@ -60,17 +61,17 @@ textarea {
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
     padding: 6px;
     padding-top: 8px;
-    font-size: 110%;
+    font-size: 16px;
 }
 
 div.flex-v-box.starred-pages-wrapper > div.flex-h-box > span {
-    font-size: 14px;
+    font-size: 16px;
     opacity: 80%;
     letter-spacing: 0.0em;
 }
 
 div.roam-sidebar-container.noselect > div > div {
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 0.03em;
     
 }
@@ -84,14 +85,10 @@ div.roam-sidebar-container.noselect > div > div {
     background: white;
 }
 
-span.bp3-icon-small.bp3-icon-star {
-    display: none;
-    visibility: hidden;
-}
-
 #right-sidebar > div {
     background-color: #f7f8fa;
 }
+
 .rm-page-ref-brackets {
     display: none;
 }
@@ -124,18 +121,13 @@ span.bp3-icon-small.bp3-icon-star {
     min-width: 200px;
     border-radius: 3px;
 }
-.rm-block-ref::before {
-    content: '';
-    display: inline-block;
-    width: 10px;
-    border-radius: 40px;
-    height: 10px;
-    background: #3857F1;
-    margin-right: 5px;
+.rm-block-ref::after {
+    content: '⚯';    
+    color: #3857F1;
+  	margin-left: 5px;
 }
 .rm-block-ref {
     border-bottom: none;
-    font-size: 1em;
     color: #627a9d;
 }
 .rm-block-ref:hover {
@@ -166,13 +158,14 @@ span.bp3-icon-small.bp3-icon-star {
 }
 
 .rm-level2 {
-    font-size: 1.5em;
+    font-size: 16px;
 }
 .rm-level3 {
     color: #939aae;
     font-weight: 400;
-    font-size: 1.3em;
+    font-size: 16px;
 }
+
 .rm-page-ref {
     color: #9aabd0;
 }
@@ -186,7 +179,6 @@ span.bp3-icon-small.bp3-icon-star {
 a {
     color: #E84B80;
 }
-
 
 .roam-body .roam-app .roam-sidebar-container {
     background-color: #f7f8fa;
@@ -221,6 +213,42 @@ span.rm-page-ref {
     text-align: center;
 }
 
+#roam-sidebar-logo {
+  display: none !important;
+}
+
+/*Right sidebar resizable*/
+
+#right-sidebar .hoverparent,
+#right-sidebar .react-resizable {
+  max-width: 100% !important;
+}
+#right-sidebar .hoverparent img,
+#right-sidebar .react-resizable img {
+  max-width: 100% !important;
+}
+
+/* YouTube Player button*/
+
+.timestamp-control {
+  background-color: rgba(108,109,36,0.1); 
+  color: rgb(251,106,13);
+  margin-right: 8px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border-radius: '50%';
+  border-style: inset;  
+  border-color: #FF3200;
+  font-size: 0.9em;
+}
+.timestamp-control:hover {
+  background-color: rgba(108,109,36,0.25); 
+  border-style: outset;  
+  color: #FFFFFF;
+}
+
+/*Visible scrollbar on Chrome*/
+
 div::-webkit-scrollbar {
     width: 10px;
 }
@@ -230,4 +258,3 @@ div::-webkit-scrollbar-track {
 div::-webkit-scrollbar-thumb {
     background-color: #9999 !important;
 }
-    
